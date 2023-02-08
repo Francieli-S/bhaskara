@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bhaskara</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=display-width, initial-scale=1" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="intro">
+        <h1>Bhaskara formula calulator</h1>
+        <h2>What is Bhaskara formula?</h2>
+        <p>
+          In elementary algebra, Bhaskara formula, also known as quadratic
+          formula, is a formula that provides the solutions to a quadratic
+          equation. Quadratic equation (from the Latin <em>quadratus</em> for
+          "square") is any equation that can be rearranged in standard form as
+          <strong>\(ax^2 + bx + c = 0\)</strong> where
+          <strong>x</strong> represents an unknown, and <strong>a</strong>,
+          <strong>b</strong>, and <strong>c</strong> represent known numbers,
+          where <strong>a ≠ 0</strong>. If <strong>a = 0</strong>, then the
+          equation is linear, not quadratic, as there is no \(ax^2\) term. The
+          numbers a, b, and c are the coefficients of the equation and may be
+          distinguished by calling them, respectively, the quadratic
+          coefficient, the linear coefficient and the constant. The values of x
+          that satisfy the equation are called solutions of the equation. A
+          quadratic equation has at most two solutions.
+        </p>
+        <p id="formula">\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\]</p>
+        <h2>How to use this calculator?</h2>
+        <p>
+          Integers numbers, positive or negative, have to be assigned to
+          <strong>a</strong>, <strong>b</strong>, and <strong>c</strong>. Then,
+          the numbers have to be submited, and then, the solutions will be
+          showed in solutions box and can be used to calculate the quadratic
+          equation.
+        </p>
+      </div>
+
+      <div class="calculator">
+        <form
+          id="form"
+          action=""
+          method="post"
+          onsubmit="return validateOnSubmit(this)"
+        >
+          <div class="attributes-grid">
+            <label for="a">
+              <h4>a (quadratic coefficient)</h4>
+              <input
+                id="a"
+                placeholder="Assign a number to 'a'"
+                type="number"
+              />
+            </label>
+
+            <label for="b">
+              <h4>b (linear coefficient)</h4>
+              <input
+                id="b"
+                placeholder="Assign a number to 'b'"
+                type="number"
+              />
+            </label>
+
+            <label for="c">
+              <h4>c (constant)</h4>
+              <input
+                id="c"
+                placeholder="Assign a number to 'c'"
+                type="number"
+              />
+            </label>
+          </div>
+
+          <div id="submit-button-wrapper">
+            <button id="submit-button" type="submit">Submit numbers</button>
+          </div>
+
+          <div id="mainerror"></div>
+
+          <div id="final-result">
+            <label for="result">
+              <h4>Equation solution</h4>
+              <input
+                id="result"
+                placeholder="Waiting for numbers"
+                type="text"
+                disabled
+              />
+              <!-- "disabled" prevent user from typing in result box-->
+              <!-- Find another tag, because 'input' is not the best option: ok, I should use "output", but the box disapper, so I will have to do sth with CSS to show the result into. -->
+              <!-- When I change the input tag, this element will not be selected by .value in that function anymore, Find solution: ok, actualy, "output" tag is also selected-->
+              <!-- <output id="result" placeholder="Result" type="text"></output> -->
+            </label>
+          </div>
+        </form>
+      </div>
+
+      <hr />
+      <footer>
+        This website is a personal project of a woman who decided to learn about
+        web development.
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

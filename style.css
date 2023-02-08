@@ -1,0 +1,120 @@
+body {
+  background-image: url("images/checkered-paper2.jpg");
+  font-family: "Zen Old Mincho", serif;
+  color: #072e36;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #eefafc;
+  box-shadow: 0 8px 16px 0 rgba(34, 60, 80, 0.5);
+  border-radius: 5px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h4 {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #20188b;
+}
+
+.intro {
+  text-align: center;
+  margin: 5px 20px;
+}
+
+strong {
+  color: #20188b;
+}
+
+#formula {
+  font-size: larger;
+}
+
+.attributes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px 20px;
+}
+
+h4 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+label {
+  margin: 0 auto;
+}
+
+form input {
+  width: 160px;
+  padding: 5px 5px;
+  background-color: #ffe2ad;
+}
+
+#submit-button-wrapper {
+  text-align: center;
+}
+
+#submit-button {
+  background-color: #ffcd70;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+#submit-button:hover {
+  background-color: #ffe2ad;
+  cursor: pointer;
+}
+
+#mainerror {
+  text-align: center;
+}
+
+#final-result {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#result {
+  padding: 10px 10px;
+  text-align: center;
+}
+
+/*output {
+  border-style: solid;
+  background-color: #ffe2ad;
+  border: black;
+  margin-top: 20px;
+}*/
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: x-small;
+}
+
+@media (max-width: 600px) {
+  .attributes-grid {
+    grid-template-columns: 1fr;
+  }
+  label {
+    padding: 10px 0;
+  }
+}
